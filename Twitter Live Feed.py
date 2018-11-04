@@ -43,7 +43,7 @@ def total_polatity(polarity):
         tally = 0
         start = time.time()
 
-    
+
 # Cleans Twitter data, records tweets and calls to calculate polarity of tweet
 class listener(StreamListener):
 
@@ -76,9 +76,10 @@ class listener(StreamListener):
                    tweet = tweet.replace(word, '')
                 if word[:2] == '#':
                    tweet = tweet.replace(word, '')
-        
+
             tweet = tweet.encode('ascii', 'replace').decode('unicode-escape').replace('\n', '')
-            
+            print(tweet)
+
             analysis = TextBlob(tweet)
             sentiment = str(analysis.sentiment)
             polarity = str(analysis.sentiment.polarity)
@@ -96,7 +97,7 @@ class listener(StreamListener):
 
         except BaseException as e:
             pass
-            
+
     def on_error(self, status):
         print(status)
 
@@ -107,4 +108,3 @@ auth.set_access_token(atoken, asecret)
 # Steams tweets from specific keyword
 twitterStream = Stream(auth, listener())
 twitterStream.filter(track=["Ireland"])
-
