@@ -11,10 +11,10 @@ from tweepy.streaming import StreamListener
 from textblob import TextBlob
 import time
 
-ckey = 'wr40uoqlIEf2I8EzcmKrCnfbP'
-csecret =  'TJB3pBEHTCSU9wH3fLoj2GQsJOYzO7oZ6i6T3ftb3X4SVIjpXf'
-atoken = '750831686934466561-lTFBkDZiqY971uDbixIrPVbDw583A1D'
-asecret = 'bG1gEG1xYI9cnhwJ9gqXKIxMPh5TeVsR5Td8LCGZ1QiYp'
+ckey = 'Private'
+csecret =  'Private'
+atoken = 'Private'
+asecret = 'Private'
 
 total = 0
 tally = 0
